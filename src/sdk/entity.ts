@@ -1,3 +1,9 @@
+export enum DeviceType {
+    DESKTOP = "desktop",
+    MOBILE = "mobile",
+    TABLET = "tablet",
+}
+
 interface Typography {}
 interface BasePalette {}
 interface Spacing {}
