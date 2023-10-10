@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build-tailwind": "tailwindcss -i ./src/app/globals.css -o ./.storybook/tailwind.css",
@@ -37,6 +38,8 @@
     "eslint-config-next": "13.5.4",
     "eslint-plugin-storybook": "^0.6.15",
     "postcss": "^8",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.5",
     "storybook": "^7.4.6",
     "tailwindcss": "^3",
     "typescript": "^5"
