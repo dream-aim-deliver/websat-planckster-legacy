@@ -6,6 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  // TODO: adjust screen breakpoints, phone, tablet, laptop, desktop, projector
   theme: {
     extend: {
       backgroundImage: {
