@@ -6,6 +6,14 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  screens: {
+    phone: '640px',
+    tablet: '768px',
+    laptop: '1024px',
+    desktop: '1280',
+    tv: '1536px',
+    projector: '1920px',
+  },
   // TODO: adjust screen breakpoints, phone, tablet, laptop, desktop, projector
   theme: {
     extend: {
