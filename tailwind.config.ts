@@ -1,29 +1,61 @@
-import type { Config } from 'tailwindcss'
+import { type Config } from "tailwindcss";
 
-const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  screens: {
-    phone: '640px',
-    tablet: '768px',
-    laptop: '1024px',
-    desktop: '1280',
-    tv: '1536px',
-    projector: '1920px',
-  },
-  // TODO: adjust screen breakpoints, phone, tablet, laptop, desktop, projector
+export default {
+  content: ["./src/**/*.tsx", "./src/lib/**/*.ts", "./src/lib/**/*.tsx"],
   theme: {
+    screens: {
+      sm: "380px",
+      md: "440px",
+      lg: "640px",
+      xl: "1280px",
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        gluten: "Gluten",
+        varela: "Varela Round",
+      },
+      // Font Size Reference: https://tailwindcss.com/docs/font-size
+      animation: {
+        "slide-down": "slide-down 0.5s ease-out",
+        fadeout: "fadeout 3s ease-in-out",
+      },
+      keyframes: {
+        "slide-down": {
+          "0%": { transform: "translateY(-100%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        fadeout: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+      },
+      colors: {
+        "base-colors/neutral": {
+          50: "#FBF7F3",
+          100: "#F6E6DC",
+          200: "#E3CABA",
+          400: "#D1AC98",
+          600: "#8E5A45",
+          900: "#3D1F14",
+        },
+        "base-colors/brand": {
+          400: "#05B86D",
+          600: "#009F55",
+          700: "#008F3B",
+        },
+        text: {
+          primary: "#3D1F16",
+          secondary: "#8E5A45",
+          inverted: "#FBF7F3",
+          success: "#009F55",
+          error: "#b42245",
+          warning: "#D48C00",
+          action: "#009F55",
+          actionHover: "#05B86D",
+          actionPressed: "#008F3B",
+        },
       },
     },
   },
-  plugins: [],
-}
-export default config
+  plugins: [require("@tailwindcss/typography")],
+} satisfies Config;
