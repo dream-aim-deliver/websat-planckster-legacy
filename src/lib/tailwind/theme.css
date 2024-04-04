@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+  }
+
+  @layer utilities {
+    .connectButton {
+      background-color: #009F55 !important;
+      font-size: 1rem !important;
+      font-family: "Gluten" !important;
+      font-weight: bold !important;
+      color: white !important;
+      text-align: center !important;
+      position: relative !important;
+      letter-spacing: 0.03em !important;
+      line-height: 16px !important;
+      width: 100% !important;
+      position: relative !important;
+      border-radius: 54px !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      height: 3rem !important; /* 12 in Tailwind is 3rem */
+      box-sizing: border-box !important;
+      padding-top: 0.625rem !important; /* 2.5 in Tailwind is 0.625rem */
+      padding-right: 1rem !important; /* 4 in Tailwind is 1rem */
+      padding-bottom: 0.5rem !important; /* 2 in Tailwind is 0.5rem */
+      padding-left: 1rem !important; /* 4 in Tailwind is 1rem */
+    }
+    .connectButton:hover {
+      background-color: #05B86D !important /* Insert the color value for 'brand-400' in your Tailwind config here */;
+    }
+    
+    .connectButton:active,
+    .connectButton[aria-pressed] {
+      background-color: #008F3B /* Insert the color value for 'brand-700' in your Tailwind config here */;
+    }
+    
+    .connectButton[aria-disabled="true"] {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
