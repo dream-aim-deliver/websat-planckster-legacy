@@ -1,3 +1,6 @@
+## Discontinuation Notice
+THIS PROJECT HAS BEEN DISCONTINUED in favor of using the T3 stack and separating the UI Component Library from the NextJS context. Future updates, that follow the new strategy, will be made in [Websat-Planckster](https://github.com/dream-aim-deliver/websat-planckster)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
